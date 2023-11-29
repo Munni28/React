@@ -1,8 +1,32 @@
 <html>
     <head>
-        <title>simple html program</title>
+        <title>simple programs</title>
     </head>
     <body>
-        <h1>hello world</h1>
-    </body>
-</html>
+        <div id="root">
+            <h1>Hello World</h1>
+        </div>
+        <!--creating a heading element using html-->
+        <h3>Hello World</h3>
+        <script>
+            //creating javascript element h1
+            var h1ele = document.createElement("h1");
+            h1ele.innerHTML = "Hello world";
+
+            //fetching root element or container of the page
+            var rootElement = document.getElementById("root");
+
+            rootElement.appendChild(h1ele);
+        </script>
+
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <script>
+            var h1elereact= React.createElement("h5",{},"Hello World");
+            var htmlRoot = document.getElementById("root");
+            var rootReact = ReactDOM.createRoot(htmlRoot);
+            rootReact.render(h1elereact);
+        </script>
+        </body>
+        </html>
