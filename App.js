@@ -1,4 +1,24 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 
+/*var jsxHeading = (
+    <div>
+<h1 id="jsxHeading">Heading from JSX!!</h1>;
+<h1 id="jsxHeading2">Heading from JSX!!</h1>;
+<h1>Hello, world!</h1>
+      <p>This is a paragraph.</p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+   
+);
+
+
+// Use ReactDOM.render instead of rootReact.render
+ReactDOM.render(jsxHeading, document.getElementById('root'));
 //creating nested header element using React.Element(h1,h2,h3 inside div with class="title")
 const header= React.createElement(
   "div",
@@ -24,7 +44,7 @@ const header= React.createElement(
   ]
 );
 //creating sample element using jsx
-consts header= (
+const s = (
   <div className="Title" key="title">
     <h1 key="h1">This is h1 tag</h1>
     <h2 key="h2">This is h2 tag</h2>
@@ -32,7 +52,7 @@ consts header= (
   </div>
 );
 //creating functional component of the same with jsx
-const Header = () => {
+const u = () => {
   return (
     <div className="Title" key="title">
       <h1 key="h1">This is h1 tag</h1>
@@ -42,7 +62,7 @@ const Header = () => {
   );
 };
 //passing attiribute into the tag in jsx
-const Header = () => {
+const c = () => {
   return (
     <div className="Title" key="title">
       <h1 style={{color:"blue"}} key="h1">This is h1 tag</h1>
@@ -57,7 +77,7 @@ const AnotherComponent = function(){
   return <h2> This is Another Component</h2>
 }
 
-const Header= () => {
+const h= () => {
 return (
   <div className="Title" key="title">
     <h1 style={{color:"blue"}} key="h1">This is h1 tag</h1>
@@ -84,7 +104,7 @@ const i = () => {
         This is h1 tag
       </h1>
       {/* This is {<TitleComponent/>} */
-      <TitleElement/>
+      /*<TitleElement/>
       <h2 style={{ color: "palevioletred" }} key="h2">
         This is h2 tag
       </h2>
@@ -101,7 +121,7 @@ Add a Logo on Left
 Add a search bar in middle
 Add User icon on right
 Add CSS to make it look nice*/
-const t = () => {
+/*const t = () => {
     return(
         <>
         <header className="header">
@@ -118,4 +138,37 @@ const t = () => {
         </header>
         </>
     )
+}*/
+const heading = (
+  <h1 id="h1" key="h1">
+    This is JSX
+  </h1>
+);
+
+// React Component 
+// Functional component - new way of writing component 
+// Class component - old way of writing component
+
+// Title component is functional component
+const Title = () => {
+  return (
+    <h1 id="title" key="title">Namaste React</h1>
+  )
 }
+// Header component is functional component
+const HeaderComponent = function (){
+  return (
+    <div>
+      <Title/>
+      {/* we can also use <Title()> */}
+      {/* we can also use <Title></Title> */}
+      {console.log(10)}
+    <h1>Namaste React Functional component</h1>
+    <h2>This is h2 tag</h2>
+    </div>
+  )
+}
+// create root using createRoot
+const root = ReactDOM.createRoot(document.getElementById("root"));
+// passing react element inside root
+root.render(<HeaderComponent/>);
